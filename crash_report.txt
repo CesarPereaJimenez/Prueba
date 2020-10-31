@@ -1,0 +1,69 @@
+Oops! SparkleShare has crashed... :(
+
+If you want to help fix this crash, please report it at 
+https://github.com/hbons/SparkleShare/issues and include the lines below.
+
+Remove any sensitive information like file names, IP addresses, domain names, etc. if needed.
+
+------
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at SparkleShare.BaseController.DetermineFolderPath () [0x00000] in <637c2f5fbdb34b4fb598622611305729>:0 
+  at SparkleShare.BaseController.FinishFetcher (Sparkles.StorageType selected_storage_type) [0x00019] in <637c2f5fbdb34b4fb598622611305729>:0 
+  at SparkleShare.SetupController+<StoragePageCompleted>c__AnonStorey1.<>m__0 () [0x0000a] in <637c2f5fbdb34b4fb598622611305729>:0 
+  at System.Threading.ThreadHelper.ThreadStart_Context (System.Object state) [0x00017] in <d0e12f672b88444ab4b6d9b2ecf20142>:0 
+  at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x0008d] in <d0e12f672b88444ab4b6d9b2ecf20142>:0 
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <d0e12f672b88444ab4b6d9b2ecf20142>:0 
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state) [0x00031] in <d0e12f672b88444ab4b6d9b2ecf20142>:0 
+  at System.Threading.ThreadHelper.ThreadStart () [0x0000b] in <d0e12f672b88444ab4b6d9b2ecf20142>:0 
+
+17:12:37 Cmd | Prueba | git ls-remote --heads --exit-code origin master
+17:12:37 Cmd | test | git config pack.windowMemory 128m
+17:12:37 Cmd | test | git config core.precomposeunicode true
+17:12:42 Cmd | test | git config push.default matching
+17:12:42 Cmd | test | git config core.ignorecase false
+17:12:42 Git | Prueba | No remote changes, local+remote: 2011fce04cd6e668e907848b54ecaff4dda5e45a
+17:12:53 Cmd | test | git config core.filemode false
+17:12:53 Cmd | test | git config filter.lfs.required true
+17:13:03 Cmd | test | git config filter.lfs.clean 'git-lfs clean %f'
+17:13:03 Cmd | test | git config core.safecrlf false
+17:13:23 Cmd | test | git config filter.lfs.smudge "env GIT_SSH_COMMAND='ssh -i /home/pereajim012/.config/org.sparkleshare.SparkleShare/ssh/2020-10-15_15h34.key -o UserKnownHostsFile=/home/pereajim012/.config/org.sparkleshare.SparkleShare/ssh/known_hosts -o IdentitiesOnly=yes -o PasswordAuthentication=no -F /dev/null' git-lfs smudge %f"
+17:13:23 Cmd | test | git config core.excludesfile ""
+17:13:32 Cmd | test | git config core.packedGitLimit 128m
+17:13:32 Cmd | test | git rev-parse HEAD
+17:13:44 Cmd | test | git config core.packedGitWindowSize 128m
+17:13:44 Cmd | test | git add .sparkleshare
+17:13:45 Cmd | test | git commit --message="Set up SparkleShare project" --author="SparkleShare <info@sparkleshare.org>"
+17:13:45 Cmd | test | git config pack.deltaCacheSize 128m
+17:13:54 Cmd | test | git config pack.packSizeLimit 128m
+17:13:55 Config | Wrote to '/home/pereajim012/.config/org.sparkleshare.SparkleShare/projects.xml'
+17:13:55 /home/pereajim012/SparkleShare/192.168.186.128/test | Initializing...
+17:13:55 Cmd | test | git config core.ignorecase false
+17:13:55 Cmd | test | git config pack.windowMemory 128m
+17:14:14 Cmd | test | git config push.default matching
+17:14:14 Cmd | test | git config remote.origin.url "ssh://storage@192.168.186.128/home/storage/test"
+17:14:21 Cmd | test | git config core.sshCommand ssh -i /home/pereajim012/.config/org.sparkleshare.SparkleShare/ssh/2020-10-15_15h34.key -o UserKnownHostsFile=/home/pereajim012/.config/org.sparkleshare.SparkleShare/ssh/known_hosts -o IdentitiesOnly=yes -o PasswordAuthentication=no -F /dev/null
+17:14:21 Cmd | test | git config filter.lfs.required true
+17:14:46 Cmd | test | git config filter.lfs.clean 'git-lfs clean %f'
+17:14:46 Cmd | chmod 700 /home/pereajim012/SparkleShare/192.168.186.128/test/.git/hooks/pre-push
+17:15:38 Fetcher | /home/pereajim012/.config/org.sparkleshare.SparkleShare/tmp/PROJECT_NAME2 | Fetching folder: ssh://storage@192.168.186.128/home/storage/PROJECT_NAME2
+17:15:38 Auth | Fetching host key for 192.168.186.128
+17:15:38 Cmd | ssh-keyscan -t rsa -p 22 192.168.186.128
+17:15:38 Cmd | test | git config filter.lfs.smudge "env GIT_SSH_COMMAND='ssh -i /home/pereajim012/.config/org.sparkleshare.SparkleShare/ssh/2020-10-15_15h34.key -o UserKnownHostsFile=/home/pereajim012/.config/org.sparkleshare.SparkleShare/ssh/known_hosts -o IdentitiesOnly=yes -o PasswordAuthentication=no -F /dev/null' git-lfs smudge %f"
+17:15:38 Cmd | test | git --no-pager log --since=1.month --name-status --date=iso --find-renames --no-merges --no-color
+17:15:47 Cmd | test | git --no-pager log -n 75 --since=1.month --name-status --date=iso --find-renames --no-merges --no-color
+17:15:47 Auth | Skipping fingerprint check
+17:15:47 Cmd | test | git rev-parse HEAD
+17:15:47 Cmd | tmp | git ls-remote --heads "ssh://storage@192.168.186.128/home/storage/PROJECT_NAME2"
+17:15:53 Cmd | tmp | git clone --progress --no-checkout "ssh://storage@192.168.186.128/home/storage/PROJECT_NAME2" "/home/pereajim012/.config/org.sparkleshare.SparkleShare/tmp/PROJECT_NAME2"
+17:15:53 Cmd | test | git add .sparkleshare
+17:15:53 Git | test | Checking for remote changes...
+17:15:53 Cmd | test | git rev-parse HEAD
+17:15:53 Git | Cloning into '/home/pereajim012/.config/org.sparkleshare.SparkleShare/tmp/PROJECT_NAME2'...
+17:15:54 Git | warning: You appear to have cloned an empty repository.
+17:15:54 Controller | Added preset for 192.168.186.128
+17:15:54 Cmd | test | git config core.ignorecase true
+17:15:54 Cmd | test | git commit --message="Set up SparkleShare project" --author="SparkleShare <info@sparkleshare.org>"
+17:15:54 Cmd | test | git config core.ignorecase false
+17:16:04 Cmd | test | git rev-parse --abbrev-ref HEAD
+
